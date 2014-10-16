@@ -1,0 +1,13 @@
+def blackOrWhite():
+  file = pickAFile()
+  pic = makePicture(file)
+  for p in getPixels(pic):
+    red = getRed(p)
+    green = getGreen(p)
+    blue = getBlue(p)
+    d = sqrt((red*red)+(green*green)+(blue*blue))
+    if d > 222:
+      setColor(p, white)
+    else:
+      setColor(p, black)
+  show(pic)

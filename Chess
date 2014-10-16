@@ -1,0 +1,10 @@
+def Chess():
+  pic = makeEmptyPicture(800, 800, white)
+  blackPic = makeEmptyPicture(100, 100, black)
+  for row in range(0,8,2):
+    for col in range(1,8,2):
+      copyInto(blackPic, pic, col*100,row*100)
+  for row in range(1,8,2):
+    for col in range(0,8,2):
+      copyInto (blackPic, pic, col*100, row*100)
+  show(pic)

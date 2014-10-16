@@ -1,0 +1,14 @@
+def drawCircle(pic,diameter):
+  for i in range(628):
+    x=diameter*cos(2*pi*i/628)+150
+    y=diameter*sin(2*pi*i/628)+150
+    p = getPixel(pic, int(x), int(y))
+    setColor(p,black)
+    
+def Question15():
+  pic= makeEmptyPicture(300,300)
+  drawCircle(pic, 25)
+  drawCircle(pic, 50)
+  drawCircle(pic, 75)
+  drawCircle(pic, 100)
+  show(pic)

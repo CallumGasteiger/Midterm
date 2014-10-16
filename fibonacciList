@@ -1,0 +1,14 @@
+def fibonacciList(fib):
+  d1 = 1
+  d2 = 1
+  fibList = []
+  if fib>0:
+    fibList.append(d1)
+  if fib>1:
+    fibList.append(d2)
+  for num in range(0, (fib-2)):
+    v = d1 + d2
+    fibList.append(v)
+    d1 = d2
+    d2 = v
+  print fibList

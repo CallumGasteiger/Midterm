@@ -1,0 +1,12 @@
+def Fibonacci(fib):
+  d1 = 1
+  d2 = 1
+  if fib>0:
+    print d1
+  if fib>1:
+    print d2
+  for num in range(0, (fib-2)):
+    v = d1 + d2
+    print v
+    d1 = d2
+    d2 = v

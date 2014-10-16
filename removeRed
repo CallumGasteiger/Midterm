@@ -1,0 +1,6 @@
+def removeRed():
+  file = pickAFile()
+  pic = makePicture(file)
+  for p in getPixels(pic):
+    setRed(p,0)
+  show(pic)

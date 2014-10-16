@@ -1,0 +1,4 @@
+def totalBill(checkAmount):
+  tip = checkAmount * 0.15
+  total = checkAmount + tip
+  print total

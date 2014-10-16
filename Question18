@@ -1,0 +1,28 @@
+def drawCircle(pic,diameter):
+  for i in range(628):
+    x=diameter*cos(2*pi*i/628)+150
+    y=diameter*sin(2*pi*i/628)+150
+    p = getPixel(pic, int(x), int(y))
+    setColor(p,black)
+
+def colorCenter(pic, diameter):
+  for p in getPixels(pic):
+    if sqrt(pow(getX(p)-150,2)+pow(getY(p)-150,2)) < diameter:
+      setColor(p, red)
+
+def drawX(pic):
+  for v in range(300):
+    p = getPixel(pic, v, v)
+    setColor(p, black)
+    px = getPixel(pic, v, 299-v)
+    setColor(px, black)
+
+def Question18():
+  pic= makeEmptyPicture(300,300)
+  drawCircle(pic, 25)
+  drawCircle(pic, 50)
+  drawCircle(pic, 75)
+  drawCircle(pic, 100)
+  colorCenter(pic, 25)
+  drawX(pic)
+  show(pic)

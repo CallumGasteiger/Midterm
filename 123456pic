@@ -1,0 +1,4 @@
+def newPic():
+  color = makeColor(18,52,86)
+  pic = makeEmptyPicture(200, 200, color)
+  show(pic)
